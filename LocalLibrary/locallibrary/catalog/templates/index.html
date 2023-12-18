@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+{% block title %} <title>Library Local</title> {% endblock %}
+{% block content %}
+<h1>Local Library Home</h1>
+
+  <p>Добро пожаловать на <em>LocalLibrary</em>, удобный сайт местной библиотеки.</p>
+
+<h2>Главная страница</h2>
+
+  <p>В библиотеке имеется следующая информация о книгах :</p>
+  <ul>
+    <li><strong>Книги:</strong> {{ num_books }}</li>
+    <li><strong>Копии:</strong> {{ num_instances }}</li>
+    <li><strong>Доступные копии:</strong> {{ num_instances_available }}</li>
+    <li><strong>Авторы:</strong> {{ num_authors }}</li>
+    <li><strong>Жанр:</strong> {{num_genres}}</li>
+  </ul>
+
+  <p>
+{#    You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.#}
+  </p>
+{% endblock %}
